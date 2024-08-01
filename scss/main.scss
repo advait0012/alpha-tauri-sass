@@ -1,10 +1,15 @@
 @import url(./reset);
 
+$color-red: red;
+$color-black:black;
+$color-peach: rgba(255, 215, 185, 0.91) 23%;
+$color-violet: rgba(223, 159, 247, 0.8) 93%;
+
 body {
   font-family: "Teachers", sans-serif;
   background: linear-gradient(106.5deg,
-      rgba(255, 215, 185, 0.91) 23%,
-      rgba(223, 159, 247, 0.8) 93%);
+      $color-peach,
+      $color-violet);
 
   animation: {
     name: golgol;
@@ -15,33 +20,33 @@ body {
 }
 
 ::selection {
-  background: red;
+  background: $color-red;
   color: white;
 }
 
 @keyframes golgol {
   0% {
     background: linear-gradient(20deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-violet);
   }
 
   25% {
     background: linear-gradient(80deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-violet);
   }
 
   50% {
     background: linear-gradient(120deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-violet);
   }
 
   100% {
     background: linear-gradient(160deg,
-        rgba(255, 215, 185, 0.91) 23%,
-        rgba(223, 159, 247, 0.8) 93%);
+        $color-peach,
+        $color-violet);
   }
 }
 
@@ -70,10 +75,10 @@ header {
   .logo {
     height: 20px;
     width: 20px;
-    background: black;
+    background: $color-black;
     transform: rotate(45deg);
     transition: 0.5s ease;
-  
+
     &:hover {
       cursor: pointer;
       transform: rotate(90deg);
@@ -84,20 +89,20 @@ header {
   ul {
     list-style: none;
     text-align: right;
-    color: red;
+    color: $color-red;
     cursor: pointer;
 
     li:first-child {
       font-weight: 600;
       margin-bottom: 25px;
-      color: black;
+      color: $color-black;
       font-size: 20px;
     }
   }
 }
 
 /* Main */
-main{
+main {
   h1 {
     font-size: 70px;
     font-weight: 400;
